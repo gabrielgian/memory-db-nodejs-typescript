@@ -14,12 +14,14 @@
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "yarn lint"
+    ]
   },
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts --fix",
     "start:dev": "nodemon",
     "prepare": "husky install"
   }
