@@ -22,7 +22,7 @@ class Collection {
 
   assertExistance(): void {
     if (this.deleted) {
-      throw new Error('Collection has been deleted.');
+      throw new ReferenceError('Collection has been deleted.');
     }
   }
 
@@ -85,6 +85,15 @@ class Collection {
     this.clear();
 
     this.deleted = true;
+  }
+
+  /**
+   * @returns Returns the number of records of the collection
+   */
+  size(): number {
+    this.assertExistance();
+
+    return this.values.size;
   }
 }
 

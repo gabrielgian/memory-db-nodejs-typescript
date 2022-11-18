@@ -105,5 +105,8 @@
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
     "out": "docs"
-  }
+  },
+  "exclude": [
+    "./src/**/*.spec.ts"
+  ],
 }

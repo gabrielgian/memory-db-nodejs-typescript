@@ -49,6 +49,14 @@ class Database {
   }
 
   /**
+   *
+   * @returns Returns an iterator for all collections in the order they were added
+   */
+  getCollections(): IterableIterator<Collection> {
+    return this.collections.values();
+  }
+
+  /**
    * Deletes a collection from database
    *
    * @param name collection's name to be deleted
