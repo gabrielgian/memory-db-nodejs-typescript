@@ -1,4 +1,12 @@
 {
+  "name": "memory", 
+  "version": "0.0.1",
+  "description": "An in-memory database implemented in Node.JS and Typescript",
+  "author": {
+    "name": "Gabriel Tessaroli Giancristofaro",
+    "email": "gabriel.tessaroli@gmail.com",
+    "url": "https://github.com/gabrielgian"
+  },
   "dependencies": {
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
@@ -11,10 +19,11 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.23.21",
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "**/*": [
+    "**/*.ts": [
       "prettier --write --ignore-unknown",
       "yarn lint"
     ]
