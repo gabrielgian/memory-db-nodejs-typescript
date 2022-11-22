@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/chai": "^4.3.4",
+    "@types/merge-descriptors": "^1.0.1",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
@@ -17,7 +18,9 @@
     "eslint": "^8.27.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "husky": "^8.0.2",
+    "json-stream-stringify": "^3.0.1",
     "lint-staged": "^13.0.3",
+    "merge-descriptors": "^1.0.1",
     "mocha": "^10.1.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
@@ -29,7 +32,8 @@
   "lint-staged": {
     "**/*.ts": [
       "prettier --write --ignore-unknown",
-      "yarn lint"
+      "yarn lint",
+      "npx typedoc"
     ]
   },
   "scripts": {
